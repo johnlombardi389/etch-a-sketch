@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100%;
+  background: rgb(221, 221, 221);
+}
+
+.grid-container {
+  display: grid;
+  grid-gap: 0px;
+}
+
+.defaultGridBlock {
+  background-color: pink;
+  border: 2px solid red;
+  width: 25px;
+  height: 25px;
+}
