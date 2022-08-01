@@ -33,7 +33,6 @@ main {
   grid-template-columns: repeat(var(--grid-cols), 1fr);
   background-color: blue;
   justify-content: center;
-  width: 50%;
   margin: 0 auto;
 }
 
