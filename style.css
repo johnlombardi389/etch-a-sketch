@@ -1,3 +1,8 @@
+:root {
+  --grid-cols: 1;
+  --grid-rows: 1;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,13 +10,21 @@
 }
 
 html, body {
+  position: relative;
   min-height: 100%;
   background: rgb(221, 221, 221);
 }
 
-:root {
-  --grid-cols: 1;
-  --grid-rows: 1;
+header > h1 {
+  text-align: center;
+  margin: 50px auto;
+}
+
+main {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 auto;
 }
 
 .grid-container {
@@ -29,4 +42,28 @@ html, body {
   border: 2px solid red;
   width: 25px;
   height: 25px;
+}
+
+/* Footer */
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.social-links {
+  color: green;
+  font-size: 24px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-links:hover {
+  transform: rotate(360deg) scale(1.2);
 }
