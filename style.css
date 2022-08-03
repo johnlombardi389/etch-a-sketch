@@ -12,19 +12,81 @@
 html, body {
   position: relative;
   min-height: 100%;
-  background: rgb(221, 221, 221);
+  background: #00A3FF;
+  font-family: 'Nunito', sans-serif;
 }
 
 header > h1 {
   text-align: center;
   margin: 50px auto;
+  font-size: 48px
+  font-weight: 900;
+  color: white;
 }
 
 main {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  margin: 0 auto;
+}
+
+.controls {
+  display: grid;
+  justify-content: center;
+  width: 350px;
+  height: 500px;
+  margin: 0 50px;
+}
+
+.canvas-size > h2 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+}
+
+.size-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0px auto;
+}
+
+.btn {
+  background-color: var(--bg-color);
+  color: #222;
+  margin: 10px;
+  width: 100px;
+  height: 40px;
+  border: none;
+  outline: none;
+  position: relative;
+  cursor: pointer;
+  font-size: 16px;
+
+  --bg-color: #E3E3E3;
+  --accent-color: #FF8888;
+  --border-size: 5px;
+}
+
+.btn.btn-pop::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  border: var(--border-size) solid var(--accent-color);
+  transition: top, left, right, bottom, 150ms ease-in-out;
+}
+
+.btn.btn-pop:hover::before, .btn.btn-pop:focus::before {
+  top: calc(var(--border-size) * -2);
+  left: calc(var(--border-size) * -2);
+  right: calc(var(--border-size) * -2);
+  bottom: calc(var(--border-size) * -2);
 }
 
 .grid-container {
@@ -33,12 +95,13 @@ main {
   grid-template-columns: repeat(var(--grid-cols), 1fr);
   background-color: blue;
   justify-content: center;
-  margin: 0 auto;
+  border: solid 30px #FF3C3C;
+  border-radius: 10px;
 }
 
 .defaultGridBlock {
-  background-color: pink;
-  border: 2px solid red;
+  background-color: rgb(223, 223, 223);
+  border: 2px solid grey;
   width: 25px;
   height: 25px;
 }
