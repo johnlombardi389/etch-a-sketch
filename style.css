@@ -19,8 +19,7 @@ html, body {
 header > h1 {
   text-align: center;
   margin: 50px auto;
-  font-size: 48px
-  font-weight: 900;
+  font-size: 48px;
   color: white;
 }
 
@@ -53,6 +52,8 @@ main {
   margin: 0px auto;
 }
 
+
+/* Base canvas size button */
 .btn {
   background-color: var(--bg-color);
   color: #222;
@@ -70,7 +71,8 @@ main {
   --border-size: 5px;
 }
 
-.btn.btn-pop::before {
+/* Button slide animation */
+.btn.btn-slide::before {
   content: '';
   position: absolute;
   top: 0;
@@ -78,17 +80,21 @@ main {
   right: 0;
   bottom: 0;
   z-index: -1;
-  border: var(--border-size) solid var(--accent-color);
-  transition: top, left, right, bottom, 150ms ease-in-out;
+  background-color: green;
+  transition: transform 350ms ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
 }
 
-.btn.btn-pop:hover::before, .btn.btn-pop:focus::before {
-  top: calc(var(--border-size) * -2);
-  left: calc(var(--border-size) * -2);
-  right: calc(var(--border-size) * -2);
-  bottom: calc(var(--border-size) * -2);
+.btn.btn-slide:hover::before, .btn.btn-slide:focus::before {
+  transform: scaleX(1);
 }
 
+.btn.btn-slide {
+  z-index: 1;
+}
+
+/* Pixel grid */
 .grid-container {
   display: grid;
   grid-template-rows: repeat(var(--grid-rows), 1fr);

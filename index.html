@@ -5,20 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Etch-A-Sketch</title>
+    <title>Pixel-a-Sketch</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;500;700;900&display=swap" rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/ef048fc690.js" crossorigin="anonymous"></script>
     
   </head>
   <body>
     <header>
-      <h1>Etch a Sketch</h1>
+      <h1>Pixel-a-Sketch</h1>
     </header>
 
     <main>
-      <div class="controls"></div>
+      <div class="controls">
+        <div class="canvas-size">
+          <h2>Canvas Size</h2>
+          <div class="size-btns">
+            <button class="btn btn-slide" id="eight">8x8</button>
+            <button class="btn btn-slide" id="sixteen">16x16</button>
+            <button class="btn btn-slide" id="thirty">30x30</button>
+            <button class="btn btn-slide" id="fifty">50x50</button>
+          </div>
+        </div>
+        <div class="color-pal"></div>
+      </div>
       <div class ="grid-container" id="container"></div>
     </main>
 
