@@ -160,6 +160,7 @@ h2 {
   justify-content: center;
   border: solid 30px #FF3C3C;
   border-radius: 10px;
+  box-shadow: -2px 2px 1px 1px #b62b2b, 1px 1px 2px 1px #ffacac, 1px 0px 2px 1px #ffacac;
 }
 
 .defaultGridBlock {
