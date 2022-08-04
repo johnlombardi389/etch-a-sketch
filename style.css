@@ -32,7 +32,7 @@ main {
 .controls {
   display: grid;
   justify-content: center;
-  width: 300px;
+  width: 250px;
   margin: 0 50px;
 }
 
@@ -44,7 +44,7 @@ h2 {
 }
 
 .canvas-size {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .size-btns {
@@ -108,10 +108,47 @@ h2 {
 
 .pal {
   background-color: pink;
-  border: 2px solid purple;
-  width: 48px;
-  height: 48px;
+  border-radius: 5px;
+  width: 40px;
+  height: 40px;
   margin: 10px;
+}
+
+.col1 {
+  background-color: black;
+}
+
+.col2 {
+  background-color: red;
+}
+
+.col3 {
+  background-color: orange;
+}
+
+.col4 {
+  background-color: yellow;
+}
+
+.col5 {
+  background-color: green;
+}
+
+.col6 {
+  background-color: blue;
+}
+
+.col7 {
+  background-color: pink;
+}
+
+.col8 {
+  background-color: purple;
+}
+
+/* Erasers */
+.erasers {
+  margin-top: 50px;
 }
 
 /* Pixel grid */
