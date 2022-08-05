@@ -1,13 +1,18 @@
 const DEFAULT_SIZE = 16
+const DEFAULT_COLOR = "";
 
 let currentSize = DEFAULT_SIZE;
+let currentColor = DEFAULT_COLOR;
 
 const container_div = document.getElementById('container');
-/* Buttons */
+
 const eight_btn = document.getElementById('eight');
 const sixteen_btn = document.getElementById('sixteen');
 const threetwo_btn = document.getElementById('threetwo');
 const sixfour_btn = document.getElementById('sixfour');
+
+const clear_btn = document.getElementById('clear');
+const eraser_btn = document.getElementById('eraser');
 
 
 function buildGrid(size) {
@@ -25,6 +30,7 @@ function buildGrid(size) {
 
 buildGrid(currentSize);
 
+/* Canvas size buttons */
 eight_btn.addEventListener('click', e => {
   currentSize = 8;
   buildGrid(currentSize);
@@ -45,3 +51,7 @@ sixfour_btn.addEventListener('click', e => {
   buildGrid(currentSize);
 });
 
+/* Clear canvas button */
+function clearCanvas() {
+  /*set divs to default color*/
+}
