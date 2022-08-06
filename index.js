@@ -5,11 +5,15 @@ let currentSize = DEFAULT_SIZE;
 let currentColor = DEFAULT_COLOR;
 
 const container_div = document.getElementById('container');
+const defaultGridBlock_div = document.getElementsByClassName('defaultGridBlock');
 
 const eight_btn = document.getElementById('eight');
 const sixteen_btn = document.getElementById('sixteen');
 const threetwo_btn = document.getElementById('threetwo');
 const sixfour_btn = document.getElementById('sixfour');
+
+const gridOn_btn = document.getElementById('radio-one');
+const gridOff_btn = document.getElementById('radio-two');
 
 const clear_btn = document.getElementById('clear');
 const eraser_btn = document.getElementById('eraser');
@@ -54,4 +58,15 @@ sixfour_btn.addEventListener('click', e => {
 /* Clear canvas button */
 function clearCanvas() {
   /*set divs to default color*/
+
+}
+
+
+gridOn_btn.addEventListener('input', e => toggleGridLines(1 + "px"));
+
+gridOff_btn.addEventListener('input', e => toggleGridLines(0 + "px"));
+
+function toggleGridLines(toggle) {
+  defaultGridBlock_div.style.setProperty('--gridlines', toggle);
+  console.log("Hello");
 }
