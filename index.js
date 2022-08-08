@@ -105,8 +105,15 @@ let changeColor = DEFAULT_COLOR;
 let colors = ["black", "red", "orange", "yellow", "green", "blue", "pink", "purple"];
 
 
-container_div.addEventListener('mousedown', function(e) {
-  if(e.target.matches('.defaultGridBlock')) {
-    e.target.classList.add('targetColor')
+/* Draw on canvas by clicking and holding mouse */
+let mouseDown = 0;
+document.body.onmousedown = () => mouseDown = 1;
+document.body.onmouseup = () => mouseDown = 0;
+
+container_div.addEventListener('mouseover', function(e) {
+  if(mouseDown) {
+    if(e.target.matches('.defaultGridBlock')) {
+      e.target.classList.add('targetColor');
+    }
   }
 })
