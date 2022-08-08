@@ -1,8 +1,7 @@
 const DEFAULT_SIZE = 16
-const DEFAULT_COLOR = "";
+
 
 let currentSize = DEFAULT_SIZE;
-let currentColor = DEFAULT_COLOR;
 
 const container_div = document.getElementById('container');
 const defaultGridBlock_div = document.getElementsByClassName('defaultGridBlock');
@@ -99,9 +98,15 @@ function clearCanvas() {
 
 }
 
-/*
-document.addEventListener('hover', function(e) {
-  if(e.target && e.target.id== 'targetColor'){
-    e.target.style.backgroundColor = "black";
+
+const DEFAULT_COLOR = "black";
+let changeColor = DEFAULT_COLOR;
+
+let colors = ["black", "red", "orange", "yellow", "green", "blue", "pink", "purple"];
+
+
+container_div.addEventListener('mousedown', function(e) {
+  if(e.target.matches('.defaultGridBlock')) {
+    e.target.classList.add('targetColor')
   }
-});*/
+})
