@@ -19,6 +19,7 @@ const clear_btn = document.getElementById('clear');
 const eraser_btn = document.getElementById('eraser');
 
 
+/* Build grid inside container */
 function buildGrid(size) {
   container_div.innerHTML = '';
   container_div.classList.remove('defaultGridBlock');
@@ -28,12 +29,42 @@ function buildGrid(size) {
   for (let i = 0; i < (size * size); i++) {
     const gridBlock = document.createElement('div');
     gridBlock.className = "defaultGridBlock";
-    /*gridBlock.setAttribute('id', 'gridLines');*/
     container_div.appendChild(gridBlock);
   }
 }
 
+buildGrid(currentSize);
+
+
+/* Canvas size buttons */
+eight_btn.addEventListener('click', e => {
+  currentSize = 8;
+  buildGrid(currentSize);
+  resetGridLines();
+});
+
+sixteen_btn.addEventListener('click', e => {
+  currentSize = 16;
+  buildGrid(currentSize);
+  resetGridLines();
+});
+
+threetwo_btn.addEventListener('click', e => {
+  currentSize = 32;
+  buildGrid(currentSize);
+  resetGridLines();
+});
+
+sixfour_btn.addEventListener('click', e => {
+  currentSize = 64;
+  buildGrid(currentSize);
+  resetGridLines();
+});
+
+
+/* Toggle grid lines on and off */
 gridOn_btn.addEventListener('input', function(e) {
+  gridLineStatus = "on";
   const gridLines = document.querySelectorAll('.defaultGridBlock');
 
   gridLines.forEach(border => {
@@ -42,6 +73,7 @@ gridOn_btn.addEventListener('input', function(e) {
 })
 
 gridOff_btn.addEventListener('input', function(e) {
+  gridLineStatus = "off";
   const gridLines = document.querySelectorAll('.defaultGridBlock');
 
   gridLines.forEach(border => {
@@ -49,31 +81,27 @@ gridOff_btn.addEventListener('input', function(e) {
   });
 })
 
-buildGrid(currentSize);
 
-/* Canvas size buttons */
-eight_btn.addEventListener('click', e => {
-  currentSize = 8;
-  buildGrid(currentSize);
-});
+/* Reset grid lines to on when changing canvas size */
+function resetGridLines() {
+  let resetLines = document.getElementsByName('switch-one');
 
-sixteen_btn.addEventListener('click', e => {
-  currentSize = 16;
-  buildGrid(currentSize);
-});
+  for(let i = 0; i < resetLines.length; i++) {
+    resetLines[0].checked = true;
+  }
+}
 
-threetwo_btn.addEventListener('click', e => {
-  currentSize = 32;
-  buildGrid(currentSize);
-});
 
-sixfour_btn.addEventListener('click', e => {
-  currentSize = 64;
-  buildGrid(currentSize);
-});
 
 /* Clear canvas button */
 function clearCanvas() {
   /*set divs to default color*/
 
 }
+
+/*
+document.addEventListener('hover', function(e) {
+  if(e.target && e.target.id== 'targetColor'){
+    e.target.style.backgroundColor = "black";
+  }
+});*/
