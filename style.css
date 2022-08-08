@@ -217,12 +217,12 @@ h2 {
 
 .defaultGridBlock {
   background-color: var(--grid-color);
-  border: var(--gridlines) solid var(--gridline-color);
-  /*width: 25px;
-  height: 25px;*/
-
-  --gridlines: 1px;
+  border: 1px solid var(--gridline-color);
 }
+/*
+#gridLines{
+  border: 1px solid var(--gridline-color);
+}*/
 
 /* Footer */
 .footer {

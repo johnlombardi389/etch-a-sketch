@@ -28,9 +28,26 @@ function buildGrid(size) {
   for (let i = 0; i < (size * size); i++) {
     const gridBlock = document.createElement('div');
     gridBlock.className = "defaultGridBlock";
+    /*gridBlock.setAttribute('id', 'gridLines');*/
     container_div.appendChild(gridBlock);
   }
 }
+
+gridOn_btn.addEventListener('input', function(e) {
+  const gridLines = document.querySelectorAll('.defaultGridBlock');
+
+  gridLines.forEach(border => {
+    border.style.border = '1px solid var(--gridline-color)';
+  });
+})
+
+gridOff_btn.addEventListener('input', function(e) {
+  const gridLines = document.querySelectorAll('.defaultGridBlock');
+
+  gridLines.forEach(border => {
+    border.style.border = '0px solid var(--gridline-color)';
+  });
+})
 
 buildGrid(currentSize);
 
@@ -59,14 +76,4 @@ sixfour_btn.addEventListener('click', e => {
 function clearCanvas() {
   /*set divs to default color*/
 
-}
-
-
-gridOn_btn.addEventListener('input', e => toggleGridLines(1 + "px"));
-
-gridOff_btn.addEventListener('input', e => toggleGridLines(0 + "px"));
-
-function toggleGridLines(toggle) {
-  defaultGridBlock_div.style.setProperty('--gridlines', toggle);
-  console.log("Hello");
 }
