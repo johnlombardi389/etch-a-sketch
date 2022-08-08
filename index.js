@@ -111,9 +111,15 @@ document.body.onmousedown = () => mouseDown = 1;
 document.body.onmouseup = () => mouseDown = 0;
 
 container_div.addEventListener('mouseover', function(e) {
-  if(mouseDown) {
+  if(mouseDown === 1) {
     if(e.target.matches('.defaultGridBlock')) {
       e.target.classList.add('targetColor');
     }
+  }
+})
+
+container_div.addEventListener('click', function(e) {
+  if(e.target.matches('.defaultGridBlock')) {
+    e.target.classList.add('targetColor');
   }
 })
