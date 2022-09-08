@@ -8,6 +8,8 @@ Create your own pixel art using the Pixel Sketch App. Select your canvas size, c
 
 ### Built with:
 
--HTML
--CSS
--JavaScript
+- HTML
+- CSS
+- JavaScript
+- Git
+- Figma
