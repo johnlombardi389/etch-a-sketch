@@ -1,4 +1,4 @@
-# Pixel Sketch App
+#pixel-sketch
 
 Picture of final app
 
