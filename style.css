@@ -215,8 +215,28 @@ h2 {
   border-radius: 10px;
   box-shadow: -2px 2px 1px 1px #b62b2b, 1px 1px 2px 1px #ffacac,
     1px 0px 2px 1px #ffacac;
-  width: 500px;
-  height: 500px;
+  width: 800px;
+  height: 800px;
+}
+
+@media (max-width: 1200px) {
+  .grid-container {
+    width: 600px;
+    height: 600px;
+  }
+}
+
+@media (max-width: 1000px) {
+  main {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    width: 400px;
+    height: 400px;
+  }
 }
 
 .defaultGridBlock {
