@@ -88,8 +88,10 @@ function resetGridLines() {
 
 /* Clear canvas button */
 function clearCanvas() {
-  /*set divs to default color*/
+  buildGrid(currentSize);
 }
+
+clear_btn.addEventListener("click", () => clearCanvas());
 
 const DEFAULT_COLOR = "black";
 let changeColor = DEFAULT_COLOR;
