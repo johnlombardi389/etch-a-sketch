@@ -244,6 +244,10 @@ h2 {
   border: 1px solid var(--gridline-color);
 }
 
+.remove-grid-lines {
+  border: 0px solid var(--gridline-color);
+}
+
 .targetColor {
   background-color: black;
 }
