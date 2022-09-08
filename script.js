@@ -91,21 +91,10 @@ function clearCanvas() {
   buildGrid(currentSize);
 }
 
-clear_btn.addEventListener("click", () => clearCanvas());
-
-const DEFAULT_COLOR = "black";
-let changeColor = DEFAULT_COLOR;
-
-let colors = [
-  "black",
-  "red",
-  "orange",
-  "yellow",
-  "green",
-  "blue",
-  "pink",
-  "purple",
-];
+clear_btn.addEventListener("click", () => {
+  clearCanvas();
+  resetGridLines();
+});
 
 /* Draw on canvas by clicking and holding mouse */
 let mouseDown = 0;
@@ -125,3 +114,5 @@ container_div.addEventListener("click", function (e) {
     e.target.classList.add("targetColor");
   }
 });
+
+/* Set drawing color */
