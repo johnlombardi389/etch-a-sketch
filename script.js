@@ -97,6 +97,7 @@ clear_btn.addEventListener("click", () => {
 });
 
 /* Draw on canvas by clicking and holding mouse */
+/*
 let mouseDown = 0;
 document.body.onmousedown = () => (mouseDown = 1);
 document.body.onmouseup = () => (mouseDown = 0);
@@ -114,5 +115,28 @@ container_div.addEventListener("click", function (e) {
     e.target.classList.add("targetColor");
   }
 });
+*/
+
+let mouseDown = 0;
+document.body.onmousedown = () => (mouseDown = 1);
+document.body.onmouseup = () => (mouseDown = 0);
+
+container_div.addEventListener("mouseover", function (e) {
+  if (mouseDown === 1) {
+    if (e.target.matches(".defaultGridBlock")) {
+      e.target.style.backgroundColor = currentColor;
+    }
+  }
+});
 
 /* Set drawing color */
+const DEFAULT_COLOR = "black";
+let currentColor = DEFAULT_COLOR;
+
+const blackColor = document.getElementById("black");
+const redColor = document.getElementById("red");
+const orangeColor = document.getElementById("orange");
+
+blackColor.addEventListener("click", () => (currentColor = "black"));
+redColor.addEventListener("click", () => (currentColor = "red"));
+orangeColor.addEventListener("click", () => (currentColor = "orange"));
