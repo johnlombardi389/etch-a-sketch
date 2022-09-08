@@ -1,8 +1,8 @@
 :root {
   --grid-cols: 1;
   --grid-rows: 1;
-  --grid-color: #EAF1EF;
-  --gridline-color: #E0E5E3;
+  --grid-color: #eaf1ef;
+  --gridline-color: #e0e5e3;
 }
 
 * {
@@ -11,16 +11,16 @@
   box-sizing: border-box;
 }
 
-html, body {
-  position: relative;
+html,
+body {
   min-height: 100%;
-  background: #00A3FF;
-  font-family: 'Nunito', sans-serif;
+  background: #00a3ff;
+  font-family: "Nunito", sans-serif;
 }
 
 header > h1 {
   text-align: center;
-  margin: 50px auto;
+  margin: 50px auto 0px auto;
   font-size: 48px;
   color: white;
 }
@@ -29,6 +29,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 85vh;
 }
 
 .controls {
@@ -59,52 +60,51 @@ h2 {
 }
 
 .switch-field {
-	display: flex;
-	margin-bottom: 36px;
-	overflow: hidden;
+  display: flex;
+  margin-bottom: 36px;
+  overflow: hidden;
   justify-content: center;
   margin-top: 20px;
 }
 
 .switch-field input {
-	position: absolute !important;
-	clip: rect(0, 0, 0, 0);
-	height: 1px;
-	width: 1px;
-	border: 0;
-	overflow: hidden;
+  position: absolute !important;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  width: 1px;
+  border: 0;
+  overflow: hidden;
 }
 
 .switch-field label {
-	background-color: #e4e4e4;
-	color: rgba(0, 0, 0, 0.6);
-	font-size: 14px;
-	line-height: 1;
-	text-align: center;
-	padding: 8px 16px;
-	margin-right: -1px;
-	border: 1px solid rgba(0, 0, 0, 0.2);
-	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
-	transition: all 0.1s ease-in-out;
+  background-color: #e4e4e4;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  line-height: 1;
+  text-align: center;
+  padding: 8px 16px;
+  margin-right: -1px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+  transition: all 0.1s ease-in-out;
 }
 
 .switch-field label:hover {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .switch-field input:checked + label {
-	background-color: #a5dc86;
-	box-shadow: none;
+  background-color: #a5dc86;
+  box-shadow: none;
 }
 
 .switch-field label:first-of-type {
-	border-radius: 4px 0 0 4px;
+  border-radius: 4px 0 0 4px;
 }
 
 .switch-field label:last-of-type {
-	border-radius: 0 4px 4px 0;
+  border-radius: 0 4px 4px 0;
 }
-
 
 /* Base canvas size button */
 .btn {
@@ -119,14 +119,14 @@ h2 {
   cursor: pointer;
   font-size: 16px;
 
-  --bg-color: #E3E3E3;
-  --accent-color: #FF8888;
+  --bg-color: #e3e3e3;
+  --accent-color: #ff8888;
   --border-size: 5px;
 }
 
 /* Button slide animation */
 .btn.btn-slide::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -139,7 +139,8 @@ h2 {
   transform-origin: left;
 }
 
-.btn.btn-slide:hover::before, .btn.btn-slide:focus::before {
+.btn.btn-slide:hover::before,
+.btn.btn-slide:focus::before {
   transform: scaleX(1);
 }
 
@@ -210,9 +211,10 @@ h2 {
   grid-template-columns: repeat(var(--grid-cols), 1fr);
   /*background-color: blue;*/
   justify-content: center;
-  border: solid 30px #FF3C3C;
+  border: solid 30px #ff3c3c;
   border-radius: 10px;
-  box-shadow: -2px 2px 1px 1px #b62b2b, 1px 1px 2px 1px #ffacac, 1px 0px 2px 1px #ffacac;
+  box-shadow: -2px 2px 1px 1px #b62b2b, 1px 1px 2px 1px #ffacac,
+    1px 0px 2px 1px #ffacac;
   width: 500px;
   height: 500px;
 }
@@ -227,25 +229,8 @@ h2 {
 }
 
 /* Footer */
-.footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+.foot {
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 10px;
-  width: 100%;
-  padding: 10px;
-  font-size: 20px;
-}
-
-.social-links {
-  color: green;
-  font-size: 24px;
-  transition: transform 0.3s ease-in-out;
-}
-
-.social-links:hover {
-  transform: rotate(360deg) scale(1.2);
+  align-items: center;
 }
