@@ -129,6 +129,12 @@ container_div.addEventListener("mouseover", function (e) {
   }
 });
 
+container_div.addEventListener("click", function (e) {
+  if (e.target.matches(".defaultGridBlock")) {
+    e.target.style.backgroundColor = currentColor;
+  }
+});
+
 /* Set drawing color */
 const DEFAULT_COLOR = "black";
 let currentColor = DEFAULT_COLOR;
@@ -136,7 +142,17 @@ let currentColor = DEFAULT_COLOR;
 const blackColor = document.getElementById("black");
 const redColor = document.getElementById("red");
 const orangeColor = document.getElementById("orange");
+const yellowColor = document.getElementById("yellow");
+const greenColor = document.getElementById("green");
+const blueColor = document.getElementById("blue");
+const pinkColor = document.getElementById("pink");
+const whiteColor = document.getElementById("white");
 
 blackColor.addEventListener("click", () => (currentColor = "black"));
 redColor.addEventListener("click", () => (currentColor = "red"));
 orangeColor.addEventListener("click", () => (currentColor = "orange"));
+yellowColor.addEventListener("click", () => (currentColor = "yellow"));
+greenColor.addEventListener("click", () => (currentColor = "green"));
+blueColor.addEventListener("click", () => (currentColor = "blue"));
+pinkColor.addEventListener("click", () => (currentColor = "pink"));
+whiteColor.addEventListener("click", () => (currentColor = "white"));
