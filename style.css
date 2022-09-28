@@ -13,8 +13,9 @@
   --clr-btnhover: #3c3cff;
 
   --fs-reg: 1rem;
-  --fs-btn: 1.25rem;
+  --fs-btn: 1.1rem;
   --fs-section: 1.5rem;
+  --fs-title: 1.75rem;
 }
 
 * {
@@ -30,10 +31,10 @@ body {
   font-family: "Nunito", sans-serif;
 }
 
-header > h1 {
+h1 {
   text-align: center;
   margin: 50px auto 0px auto;
-  font-size: 48px;
+  font-size: var(--fs-title);
   color: var(--clr-font);
 }
 
