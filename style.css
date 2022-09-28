@@ -134,7 +134,7 @@ h2 {
 /* Base canvas size button */
 .btn {
   background-color: var(--clr-btn);
-  color: var(--clr-font);
+  color: black;
   margin: 10px;
   width: 100%;
   border: none;
@@ -142,7 +142,7 @@ h2 {
   cursor: pointer;
   padding: 1rem;
   font-size: var(--fs-btn);
-  font-weight: var(--fw-semi);
+  font-weight: var(--fw-reg);
 }
 
 .btn:hover {
