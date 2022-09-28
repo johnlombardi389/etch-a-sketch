@@ -17,6 +17,9 @@ const gridOff_btn = document.getElementById("radio-two");
 const clear_btn = document.getElementById("clear");
 const eraser_btn = document.getElementById("eraser");
 
+// Show active canvas size when page loads
+sixteen_btn.style.backgroundColor = "var(--clr-btnon";
+
 /* Build grid inside container */
 function buildGrid(size) {
   container_div.innerHTML = "";
