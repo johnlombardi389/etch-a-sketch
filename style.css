@@ -132,13 +132,8 @@ h2 {
   font-size: var(--fs-btn);
 }
 
-.btn:hover,
-.btn:focus {
-  background-color: var(--clr-btnon);
-}
-
-.btn-eraser {
-  width: 100%;
+.btn:hover {
+  background-color: var(--clr-btnon) !important;
 }
 
 /* Color Palette */
