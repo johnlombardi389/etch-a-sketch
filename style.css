@@ -15,7 +15,7 @@
   --fs-reg: 1rem;
   --fs-btn: 1.1rem;
   --fs-section: 1.5rem;
-  --fs-title: 1.75rem;
+  --fs-title: 2.2rem;
 }
 
 * {
@@ -48,7 +48,7 @@ main {
 .controls {
   display: grid;
   justify-content: center;
-  width: 250px;
+  width: 300px;
   margin: 0 50px;
 }
 
