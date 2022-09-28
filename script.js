@@ -38,24 +38,56 @@ eight_btn.addEventListener("click", (e) => {
   currentSize = 8;
   buildGrid(currentSize);
   resetGridLines();
+
+  if (currentSize === 8) {
+    eight_btn.style.backgroundColor = "var(--clr-btn";
+    sixteen_btn.style.backgroundColor = "var(--clr-btn";
+    threetwo_btn.style.backgroundColor = "var(--clr-btn";
+    sixfour_btn.style.backgroundColor = "var(--clr-btn";
+    e.target.style.backgroundColor = "var(--clr-btnon)";
+  }
 });
 
 sixteen_btn.addEventListener("click", (e) => {
   currentSize = 16;
   buildGrid(currentSize);
   resetGridLines();
+
+  if (currentSize === 16) {
+    eight_btn.style.backgroundColor = "var(--clr-btn";
+    sixteen_btn.style.backgroundColor = "var(--clr-btn";
+    threetwo_btn.style.backgroundColor = "var(--clr-btn";
+    sixfour_btn.style.backgroundColor = "var(--clr-btn";
+    e.target.style.backgroundColor = "var(--clr-btnon)";
+  }
 });
 
 threetwo_btn.addEventListener("click", (e) => {
   currentSize = 32;
   buildGrid(currentSize);
   resetGridLines();
+
+  if (currentSize === 32) {
+    eight_btn.style.backgroundColor = "var(--clr-btn";
+    sixteen_btn.style.backgroundColor = "var(--clr-btn";
+    threetwo_btn.style.backgroundColor = "var(--clr-btn";
+    sixfour_btn.style.backgroundColor = "var(--clr-btn";
+    e.target.style.backgroundColor = "var(--clr-btnon)";
+  }
 });
 
 sixfour_btn.addEventListener("click", (e) => {
   currentSize = 64;
   buildGrid(currentSize);
   resetGridLines();
+
+  if (currentSize === 64) {
+    eight_btn.style.backgroundColor = "var(--clr-btn";
+    sixteen_btn.style.backgroundColor = "var(--clr-btn";
+    threetwo_btn.style.backgroundColor = "var(--clr-btn";
+    sixfour_btn.style.backgroundColor = "var(--clr-btn";
+    e.target.style.backgroundColor = "var(--clr-btnon)";
+  }
 });
 
 /* Toggle grid lines on and off */
@@ -96,45 +128,6 @@ clear_btn.addEventListener("click", () => {
   resetGridLines();
 });
 
-/* Draw on canvas by clicking and holding mouse */
-/*
-let mouseDown = 0;
-document.body.onmousedown = () => (mouseDown = 1);
-document.body.onmouseup = () => (mouseDown = 0);
-
-container_div.addEventListener("mouseover", function (e) {
-  if (mouseDown === 1) {
-    if (e.target.matches(".defaultGridBlock")) {
-      e.target.classList.add("targetColor");
-    }
-  }
-});
-
-container_div.addEventListener("click", function (e) {
-  if (e.target.matches(".defaultGridBlock")) {
-    e.target.classList.add("targetColor");
-  }
-});
-*/
-
-let mouseDown = 0;
-document.body.onmousedown = () => (mouseDown = 1);
-document.body.onmouseup = () => (mouseDown = 0);
-
-container_div.addEventListener("mouseover", function (e) {
-  if (mouseDown === 1) {
-    if (e.target.matches(".defaultGridBlock")) {
-      e.target.style.backgroundColor = currentColor;
-    }
-  }
-});
-
-container_div.addEventListener("click", function (e) {
-  if (e.target.matches(".defaultGridBlock")) {
-    e.target.style.backgroundColor = currentColor;
-  }
-});
-
 /* Set drawing color */
 const DEFAULT_COLOR = "black";
 let currentColor = DEFAULT_COLOR;
@@ -156,3 +149,22 @@ greenColor.addEventListener("click", () => (currentColor = "green"));
 blueColor.addEventListener("click", () => (currentColor = "blue"));
 pinkColor.addEventListener("click", () => (currentColor = "pink"));
 whiteColor.addEventListener("click", () => (currentColor = "white"));
+
+/* Draw on canvas by clicking and holding mouse */
+let mouseDown = 0;
+document.body.onmousedown = () => (mouseDown = 1);
+document.body.onmouseup = () => (mouseDown = 0);
+
+container_div.addEventListener("mouseover", function (e) {
+  if (mouseDown === 1) {
+    if (e.target.matches(".defaultGridBlock")) {
+      e.target.style.backgroundColor = currentColor;
+    }
+  }
+});
+
+container_div.addEventListener("click", function (e) {
+  if (e.target.matches(".defaultGridBlock")) {
+    e.target.style.backgroundColor = currentColor;
+  }
+});
