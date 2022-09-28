@@ -192,10 +192,10 @@ h2 {
 /* Erasers */
 .erasers {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0px auto;
+  flex-wrap: wrap;
+  margin: 0 auto;
 }
 
 /* Pixel grid */
