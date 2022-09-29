@@ -166,46 +166,99 @@ h2 {
   width: 40px;
   height: 40px;
   margin: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
 .col1 {
   background-color: black;
 }
 
+.col1:hover {
+  outline: 3px solid black;
+  outline-offset: 3px;
+}
+
 .col2 {
   background-color: red;
+}
+
+.col2:hover {
+  outline: 3px solid red;
+  outline-offset: 3px;
 }
 
 .col3 {
   background-color: orange;
 }
 
+.col3:hover {
+  outline: 3px solid orange;
+  outline-offset: 3px;
+}
+
 .col4 {
   background-color: yellow;
+}
+
+.col4:hover {
+  outline: 3px solid yellow;
+  outline-offset: 3px;
 }
 
 .col5 {
   background-color: green;
 }
 
+.col5:hover {
+  outline: 3px solid green;
+  outline-offset: 3px;
+}
+
 .col6 {
   background-color: blue;
+}
+
+.col6:hover {
+  outline: 3px solid blue;
+  outline-offset: 3px;
 }
 
 .col7 {
   background-color: pink;
 }
 
+.col7:hover {
+  outline: 3px solid pink;
+  outline-offset: 3px;
+}
+
 .col8 {
   background-color: white;
+}
+
+.col8:hover {
+  outline: 3px solid white;
+  outline-offset: 3px;
 }
 
 .col9 {
   background-color: purple;
 }
 
+.col9:hover {
+  outline: 3px solid purple;
+  outline-offset: 3px;
+}
+
 .col10 {
   background-color: grey;
+}
+
+.col10:hover {
+  outline: 3px solid grey;
+  outline-offset: 3px;
 }
 
 /* Erasers */
