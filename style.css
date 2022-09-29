@@ -145,7 +145,7 @@ h2 {
   padding: 1rem;
   font-size: var(--fs-btn);
   font-weight: var(--fw-reg);
-  transition: 0.2s ease-in;
+  transition: 0.2s ease-in-out;
 }
 
 .btn:hover {
@@ -169,6 +169,7 @@ h2 {
   border: none;
   outline: none;
   cursor: pointer;
+  transition: 0.2s ease-in;
 }
 
 .col1 {
