@@ -37,7 +37,7 @@
 
 html,
 body {
-  min-height: 100%;
+  min-height: 100vh;
   background: var(--clr-bg);
   font-family: var(--ff-main);
 }
@@ -54,7 +54,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 85vh;
+  height: 95vh;
 }
 
 .controls {
@@ -331,7 +331,14 @@ h2 {
 
 /* Footer */
 .foot {
+  height: 5vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+a {
+  text-decoration: underline;
+  cursor: pointer;
+  color: black;
 }
