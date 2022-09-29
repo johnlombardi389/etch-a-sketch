@@ -176,7 +176,8 @@ h2 {
   background-color: black;
 }
 
-.col1:hover {
+.col1:hover,
+.col1:focus {
   outline: 3px solid black;
   outline-offset: 3px;
 }
@@ -185,7 +186,8 @@ h2 {
   background-color: red;
 }
 
-.col2:hover {
+.col2:hover,
+.col2:focus {
   outline: 3px solid red;
   outline-offset: 3px;
 }
@@ -194,7 +196,8 @@ h2 {
   background-color: orange;
 }
 
-.col3:hover {
+.col3:hover,
+.col3:focus {
   outline: 3px solid orange;
   outline-offset: 3px;
 }
@@ -203,7 +206,8 @@ h2 {
   background-color: yellow;
 }
 
-.col4:hover {
+.col4:hover,
+.col4:focus {
   outline: 3px solid yellow;
   outline-offset: 3px;
 }
@@ -212,7 +216,8 @@ h2 {
   background-color: green;
 }
 
-.col5:hover {
+.col5:hover,
+.col5:focus {
   outline: 3px solid green;
   outline-offset: 3px;
 }
@@ -221,7 +226,8 @@ h2 {
   background-color: blue;
 }
 
-.col6:hover {
+.col6:hover,
+.col6:focus {
   outline: 3px solid blue;
   outline-offset: 3px;
 }
@@ -230,7 +236,8 @@ h2 {
   background-color: pink;
 }
 
-.col7:hover {
+.col7:hover,
+.col7:focus {
   outline: 3px solid pink;
   outline-offset: 3px;
 }
@@ -239,7 +246,8 @@ h2 {
   background-color: white;
 }
 
-.col8:hover {
+.col8:hover,
+.col8:focus {
   outline: 3px solid white;
   outline-offset: 3px;
 }
@@ -248,7 +256,8 @@ h2 {
   background-color: purple;
 }
 
-.col9:hover {
+.col9:hover,
+.col9:focus {
   outline: 3px solid purple;
   outline-offset: 3px;
 }
@@ -257,7 +266,8 @@ h2 {
   background-color: grey;
 }
 
-.col10:hover {
+.col10:hover,
+.col10:focus {
   outline: 3px solid grey;
   outline-offset: 3px;
 }
