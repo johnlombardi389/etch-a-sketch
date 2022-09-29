@@ -199,6 +199,14 @@ h2 {
   background-color: white;
 }
 
+.col9 {
+  background-color: purple;
+}
+
+.col10 {
+  background-color: grey;
+}
+
 /* Erasers */
 .erasers {
   display: flex;

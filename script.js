@@ -143,6 +143,8 @@ const greenColor = document.getElementById("green");
 const blueColor = document.getElementById("blue");
 const pinkColor = document.getElementById("pink");
 const whiteColor = document.getElementById("white");
+const purpleColor = document.getElementById("purple");
+const greyColor = document.getElementById("grey");
 
 blackColor.addEventListener("click", () => (currentColor = "black"));
 redColor.addEventListener("click", () => (currentColor = "red"));
@@ -152,6 +154,8 @@ greenColor.addEventListener("click", () => (currentColor = "green"));
 blueColor.addEventListener("click", () => (currentColor = "blue"));
 pinkColor.addEventListener("click", () => (currentColor = "pink"));
 whiteColor.addEventListener("click", () => (currentColor = "white"));
+purpleColor.addEventListener("click", () => (currentColor = "purple"));
+greyColor.addEventListener("click", () => (currentColor = "grey"));
 
 /* Draw on canvas by clicking and holding mouse */
 let mouseDown = 0;
