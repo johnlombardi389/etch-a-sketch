@@ -18,6 +18,7 @@
 
   --ff-main: "Nunito", sans-serif;
 
+  --fs-small: 0.875rem;
   --fs-reg: 1rem;
   --fs-btn: 1.1rem;
   --fs-section: 1.5rem;
@@ -105,7 +106,9 @@ h2 {
 .switch-field label {
   background-color: var(--clr-btn);
   color: var(--clr-fontoff);
-  font-size: 14px;
+  font-family: var(--ff-main);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-reg);
   line-height: 1;
   text-align: center;
   padding: 12px 22px;
