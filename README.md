@@ -1,6 +1,8 @@
 # Pixel Sketch App
 
-[Create your layouts here](https://johnlombardi389.github.io/pixel-sketch/)
+Create your own pixel art by selecting your canvas size and color, then click to draw on the grid. Inspired by the classic etch-a-sketch.
+
+[Create your own pixel art here](https://johnlombardi389.github.io/pixel-sketch/)
 
 ![Screenshot](/images/pixel-sketch-img.png)
 
