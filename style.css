@@ -38,7 +38,6 @@
 
 html,
 body {
-  min-height: 100vh;
   background: var(--clr-bg);
   font-family: var(--ff-main);
 }
@@ -289,7 +288,6 @@ h2 {
   display: grid;
   grid-template-rows: repeat(var(--grid-rows), 1fr);
   grid-template-columns: repeat(var(--grid-cols), 1fr);
-  /*background-color: blue;*/
   justify-content: center;
   border: solid 30px var(--clr-border);
   border-radius: 10px;
