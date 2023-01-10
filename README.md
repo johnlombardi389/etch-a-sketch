@@ -1,40 +1,78 @@
 # Pixel Sketch App
 
-Create your own pixel art by selecting your canvas size and color, then click to draw on the grid. Inspired by the classic etch-a-sketch.
+![Screenshot](/images/pixelGridImg.png)
 
-[Create your own pixel art here](https://johnlombardi389.github.io/pixel-sketch/)
+## Table of contents
 
-![Screenshot](/images/pixel-sketch-img.png)
-
-## Tools
-
-<p>
-  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
-    <img src="https://skillicons.dev/icons?i=js" alt="Icon from https://skillicons.dev" />
-  </a>
-  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">
-    <img src="https://skillicons.dev/icons?i=css" alt="Icon from https://skillicons.dev" />
-  </a>
-  <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML">
-    <img src="https://skillicons.dev/icons?i=html" alt="Icon from https://skillicons.dev" />
-  </a>
-  <a href="https://git-scm.com/">
-    <img src="https://skillicons.dev/icons?i=git" alt="Icon from https://skillicons.dev" />
-  </a>
-  <a href="https://www.figma.com">
-    <img src="https://skillicons.dev/icons?i=figma" alt="Icon from https://skillicons.dev" />
-  </a>
-  <a href="https://code.visualstudio.com/">
-    <img src="https://skillicons.dev/icons?i=vscode" alt="Icon from https://skillicons.dev" />
-  </a>
-  </p>
+- [Overview](#overview)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Tools](#tools)
+  - [What I learned](#what-i-learned)
+  - [Example Code](#example-code)
+- [Author](#author)
 
 ## Overview
 
-Create your own pixel art using the Pixel Sketch App. My role in this project was to flex as much of my JavaScript DOM manipulation skills as currently possible. You can select your canvas size, choose your color, and freely click and drag your mouse on the grid to create your own pixel art. JavaScript will generate your grid canvas and allow you to change the color of each element based on your actions to create your own pixel art.
+Pixel Sketch is a web-based application inspired by the classic etch-a-sketch toy. The app allows users to create drawings on a digital canvas by manipulating pixels, similar to the way one would use a physical etch-a-sketch. The app is built using a combination of technologies, including vanilla JavaScript, CSS, and HTML. The project was managed and version controlled using Git, and the design of the app was created using Figma.
 
-## What I Learned
+The main feature of Pixel Sketch is its customizable canvas, which allows users to adjust the size of the canvas and the color of the pixels. Additionally, the app includes a toggle function that allows users to turn on and off a grid overlay on the canvas, giving them more precise control over their drawings. The app is designed with a simple and intuitive user interface, making it easy for anyone to start creating their own digital etch-a-sketches.
+
+![Screenshot](/images/pixelNoGridImg.png)
+
+### Links
+
+- Live Site URL: [Pixel Sketch App](https://johnlombardi389.github.io/pixel-sketch/)
+
+---
+
+## My process
+
+### Tools
+
+- JavaScript
+- CSS
+- HTML
+- Git
+- Figma
+
+### What I learned
 
 - Better understanding of manipulating elements in the DOM with JavaScript
-- Adding and removing classes, as well as changing style properties of individual elements
-- Click and mousedown event listeners / arrow functions
+- Adding and removing classes, as well as changing style properties of individual elements through JavaScript
+- Click and mousedown event listeners
+- Arrow functions
+
+### Example Code
+
+The logic behind drawing on the canvas when you click and/or drag your mouse:
+
+```javascript
+let mouseDown = 0;
+document.body.onmousedown = () => (mouseDown = 1);
+document.body.onmouseup = () => (mouseDown = 0);
+
+container_div.addEventListener("mouseover", function (e) {
+  if (mouseDown === 1) {
+    if (e.target.matches(".defaultGridBlock")) {
+      e.target.style.backgroundColor = currentColor;
+    }
+  }
+});
+
+container_div.addEventListener("click", function (e) {
+  if (e.target.matches(".defaultGridBlock")) {
+    e.target.style.backgroundColor = currentColor;
+  }
+});
+```
+
+---
+
+## Author
+
+John Lombardi
+
+- [Portfolio](https://johnlombardi389.github.io/portfolio/)
+- [LinkedIn](https://www.linkedin.com/in/johnlombardi389/)
+- [GitHub](https://github.com/johnlombardi389)
