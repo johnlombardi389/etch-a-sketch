@@ -45,7 +45,7 @@ The main feature of Pixel Sketch is its customizable canvas, which allows users 
 
 ### Example Code
 
-The logic behind drawing on the canvas when you click and/or drag your mouse:
+Creating the logic behind drawing on the canvas when you click and/or drag your mouse:
 
 ```javascript
 let mouseDown = 0;
@@ -64,6 +64,31 @@ container_div.addEventListener("click", function (e) {
   if (e.target.matches(".defaultGridBlock")) {
     e.target.style.backgroundColor = currentColor;
   }
+});
+```
+
+Setting the current color to draw with:
+
+```javascript
+const DEFAULT_COLOR = "black";
+let currentColor = DEFAULT_COLOR;
+
+const buttonColors = [
+  { id: "black", color: "black" },
+  { id: "red", color: "red" },
+  { id: "orange", color: "orange" },
+  { id: "yellow", color: "yellow" },
+  { id: "green", color: "green" },
+  { id: "blue", color: "blue" },
+  { id: "pink", color: "pink" },
+  { id: "white", color: "white" },
+  { id: "purple", color: "purple" },
+  { id: "grey", color: "grey" },
+];
+
+buttonColors.forEach(({ id, color }) => {
+  const colorBtn = document.getElementById(id);
+  colorBtn.addEventListener("click", () => (currentColor = color));
 });
 ```
 
