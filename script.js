@@ -8,8 +8,8 @@ const defaultGridBlock_div =
 
 const eight_btn = document.getElementById("eight");
 const sixteen_btn = document.getElementById("sixteen");
-const threetwo_btn = document.getElementById("threetwo");
-const sixfour_btn = document.getElementById("sixfour");
+const thirtytwo_btn = document.getElementById("thirtytwo");
+const sixtyfour_btn = document.getElementById("sixtyfour");
 
 const gridOn_btn = document.getElementById("radio-one");
 const gridOff_btn = document.getElementById("radio-two");
@@ -37,60 +37,32 @@ function buildGrid(size) {
 buildGrid(currentSize);
 
 /* Canvas size buttons */
-eight_btn.addEventListener("click", (e) => {
-  currentSize = 8;
+function handleCanvasSizeButtonClick(e, size) {
+  currentSize = size;
   buildGrid(currentSize);
   resetGridLines();
 
-  if (currentSize === 8) {
-    eight_btn.style.backgroundColor = "var(--clr-btn";
-    sixteen_btn.style.backgroundColor = "var(--clr-btn";
-    threetwo_btn.style.backgroundColor = "var(--clr-btn";
-    sixfour_btn.style.backgroundColor = "var(--clr-btn";
-    e.target.style.backgroundColor = "var(--clr-btnon)";
-  }
+  eight_btn.style.backgroundColor = "var(--clr-btn";
+  sixteen_btn.style.backgroundColor = "var(--clr-btn";
+  thirtytwo_btn.style.backgroundColor = "var(--clr-btn";
+  sixtyfour_btn.style.backgroundColor = "var(--clr-btn";
+  e.target.style.backgroundColor = "var(--clr-btnon)";
+}
+
+eight_btn.addEventListener("click", (e) => {
+  handleCanvasSizeButtonClick(e, 8);
 });
 
 sixteen_btn.addEventListener("click", (e) => {
-  currentSize = 16;
-  buildGrid(currentSize);
-  resetGridLines();
-
-  if (currentSize === 16) {
-    eight_btn.style.backgroundColor = "var(--clr-btn";
-    sixteen_btn.style.backgroundColor = "var(--clr-btn";
-    threetwo_btn.style.backgroundColor = "var(--clr-btn";
-    sixfour_btn.style.backgroundColor = "var(--clr-btn";
-    e.target.style.backgroundColor = "var(--clr-btnon)";
-  }
+  handleCanvasSizeButtonClick(e, 16);
 });
 
-threetwo_btn.addEventListener("click", (e) => {
-  currentSize = 32;
-  buildGrid(currentSize);
-  resetGridLines();
-
-  if (currentSize === 32) {
-    eight_btn.style.backgroundColor = "var(--clr-btn";
-    sixteen_btn.style.backgroundColor = "var(--clr-btn";
-    threetwo_btn.style.backgroundColor = "var(--clr-btn";
-    sixfour_btn.style.backgroundColor = "var(--clr-btn";
-    e.target.style.backgroundColor = "var(--clr-btnon)";
-  }
+thirtytwo_btn.addEventListener("click", (e) => {
+  handleCanvasSizeButtonClick(e, 32);
 });
 
-sixfour_btn.addEventListener("click", (e) => {
-  currentSize = 64;
-  buildGrid(currentSize);
-  resetGridLines();
-
-  if (currentSize === 64) {
-    eight_btn.style.backgroundColor = "var(--clr-btn";
-    sixteen_btn.style.backgroundColor = "var(--clr-btn";
-    threetwo_btn.style.backgroundColor = "var(--clr-btn";
-    sixfour_btn.style.backgroundColor = "var(--clr-btn";
-    e.target.style.backgroundColor = "var(--clr-btnon)";
-  }
+sixtyfour_btn.addEventListener("click", (e) => {
+  handleCanvasSizeButtonClick(e, 64);
 });
 
 /* Toggle grid lines on and off */
@@ -135,27 +107,23 @@ clear_btn.addEventListener("click", () => {
 const DEFAULT_COLOR = "black";
 let currentColor = DEFAULT_COLOR;
 
-const blackColor = document.getElementById("black");
-const redColor = document.getElementById("red");
-const orangeColor = document.getElementById("orange");
-const yellowColor = document.getElementById("yellow");
-const greenColor = document.getElementById("green");
-const blueColor = document.getElementById("blue");
-const pinkColor = document.getElementById("pink");
-const whiteColor = document.getElementById("white");
-const purpleColor = document.getElementById("purple");
-const greyColor = document.getElementById("grey");
+const buttonColors = [
+  { id: "black", color: "black" },
+  { id: "red", color: "red" },
+  { id: "orange", color: "orange" },
+  { id: "yellow", color: "yellow" },
+  { id: "green", color: "green" },
+  { id: "blue", color: "blue" },
+  { id: "pink", color: "pink" },
+  { id: "white", color: "white" },
+  { id: "purple", color: "purple" },
+  { id: "grey", color: "grey" },
+];
 
-blackColor.addEventListener("click", () => (currentColor = "black"));
-redColor.addEventListener("click", () => (currentColor = "red"));
-orangeColor.addEventListener("click", () => (currentColor = "orange"));
-yellowColor.addEventListener("click", () => (currentColor = "yellow"));
-greenColor.addEventListener("click", () => (currentColor = "green"));
-blueColor.addEventListener("click", () => (currentColor = "blue"));
-pinkColor.addEventListener("click", () => (currentColor = "pink"));
-whiteColor.addEventListener("click", () => (currentColor = "white"));
-purpleColor.addEventListener("click", () => (currentColor = "purple"));
-greyColor.addEventListener("click", () => (currentColor = "grey"));
+buttonColors.forEach(({ id, color }) => {
+  const colorBtn = document.getElementById(id);
+  colorBtn.addEventListener("click", () => (currentColor = color));
+});
 
 /* Draw on canvas by clicking and holding mouse */
 let mouseDown = 0;
