@@ -20,7 +20,7 @@ const eraser_btn = document.getElementById("eraser");
 // Show active canvas size when page loads
 sixteen_btn.style.backgroundColor = "var(--clr-btnon";
 
-/* Build grid inside container */
+// Build grid inside container
 function buildGrid(size) {
   container_div.innerHTML = "";
   container_div.classList.remove("defaultGridBlock");
@@ -36,7 +36,7 @@ function buildGrid(size) {
 
 buildGrid(currentSize);
 
-/* Canvas size buttons */
+// Canvas size buttons
 function handleCanvasSizeButtonClick(e, size) {
   currentSize = size;
   buildGrid(currentSize);
@@ -65,7 +65,7 @@ sixtyfour_btn.addEventListener("click", (e) => {
   handleCanvasSizeButtonClick(e, 64);
 });
 
-/* Toggle grid lines on and off */
+// Toggle grid lines on and off
 gridOn_btn.addEventListener("input", function (e) {
   gridLineStatus = "on";
   const gridLines = document.querySelectorAll(".defaultGridBlock");
@@ -84,7 +84,7 @@ gridOff_btn.addEventListener("input", function (e) {
   });
 });
 
-/* Reset grid lines to on when changing canvas size */
+// Reset grid lines to on when changing canvas size
 function resetGridLines() {
   let resetLines = document.getElementsByName("switch-one");
 
@@ -93,7 +93,7 @@ function resetGridLines() {
   }
 }
 
-/* Clear canvas button */
+// Clear canvas button
 function clearCanvas() {
   buildGrid(currentSize);
 }
@@ -103,7 +103,7 @@ clear_btn.addEventListener("click", () => {
   resetGridLines();
 });
 
-/* Set drawing color */
+// Set drawing color
 const DEFAULT_COLOR = "black";
 let currentColor = DEFAULT_COLOR;
 
@@ -125,7 +125,7 @@ buttonColors.forEach(({ id, color }) => {
   colorBtn.addEventListener("click", () => (currentColor = color));
 });
 
-/* Draw on canvas by clicking and holding mouse */
+// Draw on canvas by clicking and holding mouse
 let mouseDown = 0;
 document.body.onmousedown = () => (mouseDown = 1);
 document.body.onmouseup = () => (mouseDown = 0);
